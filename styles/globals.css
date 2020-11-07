@@ -1,0 +1,58 @@
+:root {
+  --color: rgba(151, 124, 124, 0.486);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.page {
+  margin-left: 100px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgb(182, 181, 181);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: rgb(182, 181, 181);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgb(182, 181, 181);
+}
+
+.project-wrapper,
+.overlay a {
+  box-shadow: inset 20px 0 20px var(--color), 0px 1px 0 var(--color),
+    0px 2px 0 var(--color), 0px 2px 3px var(--color);
+  box-shadow: 0px 3px 5px var(--color), 0px -3px 5px var(--color);
+  border-radius: 5px;
+}
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  position: absolute;
+  border-radius: 5px;
+}
