@@ -19,7 +19,7 @@ const NavLink = ({ href, id, activeStyle, children }) => {
           border: ${activeStyle.border};
         }
         navbar #navbar-slider label[for="${activeLink}"]::before {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
       `}</style>
     </>

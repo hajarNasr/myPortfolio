@@ -1,5 +1,6 @@
 :root {
-  --color: rgba(151, 124, 124, 0.486);
+  --projShadowColor: rgba(151, 124, 124, 0.486);
+  --postShadowColor: rgba(0, 0, 0, 0.2);
 }
 html,
 body {
@@ -43,11 +44,12 @@ a {
 }
 
 .project-wrapper,
-.overlay a,
-.post-wrapper {
-  box-shadow: inset 20px 0 20px var(--color), 0px 1px 0 var(--color),
-    0px 2px 0 var(--color), 0px 2px 3px var(--color);
-  box-shadow: 0px 3px 5px var(--color), 0px -3px 5px var(--color);
+.overlay a {
+  box-shadow: inset 20px 0 20px var(--projShadowColor),
+    0px 1px 0 var(--projShadowColor), 0px 2px 0 var(--projShadowColor),
+    0px 2px 3px var(--projShadowColor);
+  box-shadow: 0px 3px 5px var(--projShadowColor),
+    0px -3px 5px var(--projShadowColor);
   border-radius: 5px;
 }
 .img-wrapper img {
@@ -55,5 +57,14 @@ a {
   width: 100%;
   height: 380px;
   position: absolute;
+  border-radius: 5px;
+}
+
+.post-wrapper {
+  box-shadow: inset 20px 0 20px var(--postShadowColor),
+    0px 1px 0 var(--postShadowColor), 0px 2px 0 var(--postShadowColor),
+    0px 2px 3px var(--postShadowColor);
+  box-shadow: 0px 3px 5px var(--postShadowColor),
+    0px -3px 5px var(--postShadowColor);
   border-radius: 5px;
 }
