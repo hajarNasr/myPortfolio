@@ -16,7 +16,7 @@ const MainNavbar = () => {
           <RadioInput
             id="2"
             to="/projects"
-            activeStyle={{ background: "gray", border: "2px solid #943c3c" }}
+            activeStyle={{ background: "gray", border: "3px solid #943c3c" }}
           />
           <label htmlFor="2" data-navbar="Projects" />
           <RadioInput
@@ -27,7 +27,7 @@ const MainNavbar = () => {
           <RadioInput
             id="5"
             to="/blog"
-            activeStyle={{ background: "teal", border: "2px solid green" }}
+            activeStyle={{ background: "#4d7a6a", border: "3px solid white" }}
           />
           <label htmlFor="5" data-navbar="Blog" />
           <label htmlFor="3" data-navbar="About" />

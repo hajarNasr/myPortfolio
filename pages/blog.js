@@ -3,12 +3,14 @@ import Post from "../components/Post";
 const Blog = ({ devToPosts }) => {
   return (
     <div className="blog-wrapper">
-      {console.log(devToPosts)}
       {devToPosts.map((post) => (
         <Post post={post} key={post.id} />
       ))}
       <style jsx global>
         {`
+          body {
+            background: #aecbc1;
+          }
           .blog-wrapper {
             width: 90%;
             display: grid;

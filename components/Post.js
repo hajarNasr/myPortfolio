@@ -6,35 +6,41 @@ const Post = ({ post }) => {
       </div>
       <div className="post-info">
         <a href={`https://dev.to${post.path}`} target="_blanck">
-          {post.title}
+          <span className="title">{post.title} </span>
         </a>
-        <p>
+
+        <span className="date">
           {post.readable_publish_date}, {post.published_at.split("-")[0]}
-        </p>
-        <ul className="tags-list">
-          {post.tag_list.map((tag) => (
-            <li key={`${post.title}-${tag}`}>{tag}</li>
-          ))}
-        </ul>
-        <p>{post.public_reactions_count}</p>
+        </span>
       </div>
-      <style jsx>
+      <style jsx global>
         {`
           .post-wrapper {
             min-height: 280px;
+            background: #fdfbf7;
+            border-radius: 5px;
+            border: 1.5px solid gray;
+          }
+          .post-wrapper img {
+            border-radius: 5px;
           }
           .post-info {
             padding: 5px 5px 0 5px;
           }
-          .tags-list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            width: 90%;
-            margin: auto;
-            flex-wrap: wrap;
-            justify-content: space-between;
+          .title {
+            font-size: 1.3rem;
+            font-weight: 480;
+            color: #176447;
+          }
+          .title:hover {
+            border-top: 1px solid #176447;
+          }
+          .date {
+            font-size: 14px;
+            margin-top: 5px;
+            color: gray;
+            display: block;
+            padding-left: 10px;
           }
         `}
       </style>
