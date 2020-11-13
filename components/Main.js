@@ -15,17 +15,24 @@ const Main = () => {
         <ul className="social-links">
           <SocialLink
             href="https://www.twitter.com/hjarnasr/"
+            ariaLabel="Twitter account"
             child={<Twitter />}
           />
 
-          <SocialLink href="https://dev.to/hajarnasr" child={<DevTo />} />
+          <SocialLink
+            href="https://dev.to/hajarnasr"
+            ariaLabel="dev.to account"
+            child={<DevTo />}
+          />
 
           <SocialLink
             href="https://www.github.com/hajarNasr/"
+            ariaLabel="Github account"
             child={<Github />}
           />
           <SocialLink
             href="https://www.linkedin.com/in/hajar-nasr-85923b1b5/"
+            ariaLabel="Linkedin account"
             child={<Linkedin />}
           />
         </ul>
@@ -79,9 +86,9 @@ const Main = () => {
 
 export default Main;
 
-const SocialLink = ({ href, child }) => (
+const SocialLink = ({ href, ariaLabel, child }) => (
   <li>
-    <a target="_blank" href={href}>
+    <a target="_blank" href={href} aria-label={ariaLabel}>
       {child}
     </a>
   </li>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import Project from "../components/Project";
 import FilterByTech from "../components/FilterByTech";
 const Projects = () => {
@@ -14,6 +15,9 @@ const Projects = () => {
   };
   return (
     <div className="projects-page">
+      <Head>
+        <title>Projects</title>
+      </Head>
       <FilterByTech onFilter={filterProjectsInfo} />
       <div className="projects-page__inner">
         <div className="projects-wrapper">

@@ -1,6 +1,10 @@
+import Head from "next/head";
 const Contact = () => {
   return (
     <div className="contact-wrapper">
+      <Head>
+        <title>Contact</title>
+      </Head>
       <h1>Keep in Touch</h1>
       <form className="contact-form">
         <label className="label">

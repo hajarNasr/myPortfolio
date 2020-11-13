@@ -11,6 +11,7 @@ const FilterByTech = ({ onFilter }) => {
             width={logo.width}
             height={logo.height}
             title={logo.name}
+            role="button"
             onClick={() => onFilter(logo.name)}
           />
         ))}
@@ -59,48 +60,48 @@ const logosInfo = [
     src: "https://img.icons8.com/plasticine/50/000000/react.png",
     width: "40",
     height: "40",
-    alt: " React's logo",
+    alt: "React",
   },
   {
     name: "Nextjs",
     src: "/next-js.svg",
     width: "30",
     height: "30",
-    alt: "Nextjs's logo",
+    alt: "Nextjs",
   },
   {
     name: "Redux",
     src: "https://img.icons8.com/color/48/000000/redux.png",
     width: "35",
     height: "35",
-    alt: " Redux's logo",
+    alt: " Redux",
   },
   {
     name: "Expressjs",
     src: "https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg",
     width: "80",
     height: "40",
-    alt: "Expressjs's logo",
+    alt: "Expressjs",
   },
   {
     name: "Django",
     src: "https://img.icons8.com/color/48/000000/django.png",
     width: "40",
     height: "50",
-    alt: "Django's logo",
+    alt: "Django",
   },
   {
     name: "Firebse",
     src: "https://img.icons8.com/color/48/000000/firebase.png",
     width: "40",
     height: "40",
-    alt: "Firebase's logo",
+    alt: "Firebase",
   },
   {
     name: "MongoDB",
     src: "https://img.icons8.com/color/48/000000/mongodb.png",
     width: "40",
     height: "40",
-    alt: "Mongodb's logo",
+    alt: "MongoDB",
   },
 ];
