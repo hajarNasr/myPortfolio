@@ -1,19 +1,17 @@
-import Image from "next/image";
-import { ExternalLink, Github } from "./FAIcons";
-
+import LazyLoadImage from "./LazyLoadImage";
 const Project = ({ project }) => {
   const [demo, code] = ["<Demo/>", "<Code/>"];
   return (
     <div className="project-wrapper">
       <div className="img-wrapper">
-        <Image src={`/images/${project.image}`} alt="Profile Picture" unsized />
+        <LazyLoadImage src={project.image} alt={project.alt} />
       </div>
       <div className="overlay">
-        <a href={`${project.github}`} target="_blank">
+        <a href={`${project.github}`} target="_blank" rel="noopener">
           <code>{code}</code>
         </a>
 
-        <a href={`${project.demoLink}`} target="_blank">
+        <a href={`${project.demoLink}`} target="_blank" rel="noopener">
           <code>{demo}</code>
         </a>
       </div>

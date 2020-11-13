@@ -88,7 +88,7 @@ export default Main;
 
 const SocialLink = ({ href, ariaLabel, child }) => (
   <li>
-    <a target="_blank" href={href} aria-label={ariaLabel}>
+    <a target="_blank" href={href} aria-label={ariaLabel} rel="noopener">
       {child}
     </a>
   </li>

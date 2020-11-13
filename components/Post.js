@@ -1,11 +1,17 @@
+import LazyLoadImage from "./LazyLoadImage";
 const Post = ({ post }) => {
   return (
     <div className="post-wrapper">
       <div>
-        <img src={post.social_image} width="100%" height="65%" alt="" />
+        <LazyLoadImage
+          src={post.social_image}
+          width="100%"
+          height="180"
+          alt=""
+        />
       </div>
       <div className="post-info">
-        <a href={`https://dev.to${post.path}`} target="_blanck">
+        <a href={`https://dev.to${post.path}`} target="_blank" rel="noopener">
           <span className="title">{post.title} </span>
         </a>
 
