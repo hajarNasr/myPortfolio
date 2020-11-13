@@ -1,8 +1,12 @@
 import Post from "../components/Post";
+import Head from "next/head";
 
 const Blog = ({ devToPosts }) => {
   return (
-    <div className="blog-wrapper">
+    <main className="blog-wrapper">
+      <Head>
+        <title>Blog</title>
+      </Head>
       {devToPosts.map((post) => (
         <Post post={post} key={post.id} />
       ))}
@@ -23,7 +27,7 @@ const Blog = ({ devToPosts }) => {
           }
         `}
       </style>
-    </div>
+    </main>
   );
 };
 

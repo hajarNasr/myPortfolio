@@ -7,6 +7,7 @@ const MainNavbar = () => {
           <RadioInput
             id="1"
             to="/"
+            ariaLabel="Home"
             activeStyle={{
               background: "gray",
               border: "3px solid whitesmoke",
@@ -16,25 +17,29 @@ const MainNavbar = () => {
           <RadioInput
             id="2"
             to="/projects"
+            ariaLabel="Projects"
             activeStyle={{ background: "gray", border: "3px solid #943c3c" }}
           />
           <label htmlFor="2" data-navbar="Projects" />
           <RadioInput
             id="3"
             to="/about"
+            ariaLabel="About"
             activeStyle={{ background: "teal", border: "2px solid green" }}
           />
           <RadioInput
             id="5"
             to="/blog"
-            activeStyle={{ background: "#4d7a6a", border: "3px solid white" }}
+            ariaLabel="Blog"
+            activeStyle={{ background: "#436671", border: "3px solid white" }}
           />
           <label htmlFor="5" data-navbar="Blog" />
           <label htmlFor="3" data-navbar="About" />
           <RadioInput
             id="4"
             to="/contact"
-            activeStyle={{ background: "teal", border: "2px solid green" }}
+            ariaLabel="Contact"
+            activeStyle={{ background: "#4d7a6a", border: "3px solid white" }}
           />
           <label htmlFor="4" data-navbar="Contact" />
         </div>
@@ -77,6 +82,7 @@ const MainNavbar = () => {
             user-select: none;
             cursor: pointer;
           }
+
           navbar #navbar-slider label {
             display: inline-block;
             position: relative;
@@ -147,9 +153,9 @@ const MainNavbar = () => {
 
 export default MainNavbar;
 
-const RadioInput = ({ id, to, activeStyle }) => (
+const RadioInput = ({ id, to, activeStyle, ariaLabel }) => (
   <NavLink href={to} id={id} activeStyle={activeStyle}>
-    <a>
+    <a aria-label={ariaLabel}>
       <input type="radio" name="navbar-option" id={id} value={id} required />
     </a>
   </NavLink>

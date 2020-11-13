@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import Project from "../components/Project";
 import FilterByTech from "../components/FilterByTech";
 const Projects = () => {
@@ -13,40 +14,45 @@ const Projects = () => {
     );
   };
   return (
-    <div className="projects-page">
-      <FilterByTech onFilter={filterProjectsInfo} />
-      <div className="projects-page__inner">
-        <div className="projects-wrapper">
-          {projectsInfo.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
+    <>
+      <Head>
+        <title>Projects</title>
+      </Head>
+      <main className="projects-page">
+        <FilterByTech onFilter={filterProjectsInfo} />
+        <div className="projects-page__inner">
+          <div className="projects-wrapper">
+            {projectsInfo.map((project) => (
+              <Project key={project.id} project={project} />
+            ))}
+          </div>
         </div>
-      </div>
-      <style jsx global>{`
-        body {
-          background: whitesmoke;
-        }
-        .projects-page__inner {
-          display: flex;
-          justify-content: space-between;
-        }
-        .projects-wrapper {
-          width: 90%;
-          display: grid;
-          grid-gap: 25px;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          margin: auto;
-          padding-bottom: 30px;
-          min-height: 80vh;
-        }
-        navbar #navbar-slider label::after {
-          background: lightgray;
-        }
-        navbar #navbar-slider::before {
-          background: lightgray;
-        }
-      `}</style>
-    </div>
+        <style jsx global>{`
+          body {
+            background: whitesmoke;
+          }
+          .projects-page__inner {
+            display: flex;
+            justify-content: space-between;
+          }
+          .projects-wrapper {
+            width: 90%;
+            display: grid;
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            margin: auto;
+            padding-bottom: 30px;
+            min-height: 80vh;
+          }
+          navbar #navbar-slider label::after {
+            background: lightgray;
+          }
+          navbar #navbar-slider::before {
+            background: lightgray;
+          }
+        `}</style>
+      </main>
+    </>
   );
 };
 
@@ -57,7 +63,8 @@ const allProjectsInfo = [
     title: "Portfolio",
     demoLink: "https://artisticzone.herokuapp.com/",
     id: "5",
-    image: "port.JPG",
+    image: "https://i.ibb.co/SNt4WJc/port.jpg",
+    alt: "This portfolio's image",
     github: "https://github.com/hajarNasr/ArtisticZone",
     tech: ["HTML5 & CSS3", "JavaScript", "React", "Nextjs"],
   },
@@ -66,7 +73,8 @@ const allProjectsInfo = [
     demoLink: "https://artisticzone.herokuapp.com/",
     desc: "A small e-commerce app for art and photography.",
     id: "4",
-    image: "artisticzone.JPG",
+    image: "https://i.ibb.co/dkp08f2/artisticzone.jpg",
+    alt: "Aritistic Zone project's image",
     github: "https://github.com/hajarNasr/ArtisticZone",
     tech: [
       "HTML5 & CSS3",
@@ -81,7 +89,8 @@ const allProjectsInfo = [
     title: "Old Portfolio",
     demoLink: "https://irecommend-app.herokuapp.com/",
     id: "3",
-    image: "xx.JPG",
+    image: "https://i.ibb.co/52KgSjp/xx.jpg",
+    alt: "My old portfolio's image",
     github: "https://github.com/hajarNasr/irecommend-app",
     tech: ["HTML5 & CSS3", "MDL", "JavaScript", "React"],
   },
@@ -89,8 +98,8 @@ const allProjectsInfo = [
     title: "iRecommend-App",
     demoLink: "https://irecommend-app.herokuapp.com/",
     id: "2",
-    bulitWith: "",
-    image: "irecommend.JPG",
+    image: "https://i.ibb.co/C8kkR8K/irecommend.jpg",
+    alt: "I Recommend app project's image",
     github: "https://github.com/hajarNasr/irecommend-app",
     tech: [
       "HTML5 & CSS3",
@@ -106,7 +115,8 @@ const allProjectsInfo = [
     title: "Voila",
     demoLink: "https://voilaa.herokuapp.com/",
     id: "1",
-    image: "voila.JPG",
+    image: "https://i.ibb.co/rcgfZMk/voila.jpg",
+    alt: "Voila project's image",
     github: "https://github.com/hajarNasr/Voila",
     tech: ["HTML5 & CSS3", "MDL", "Bootstrap", "Pyhton", "Django"],
   },
