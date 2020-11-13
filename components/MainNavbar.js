@@ -27,14 +27,14 @@ const MainNavbar = () => {
           <RadioInput
             id="5"
             to="/blog"
-            activeStyle={{ background: "#4d7a6a", border: "3px solid white" }}
+            activeStyle={{ background: "#436671", border: "3px solid white" }}
           />
           <label htmlFor="5" data-navbar="Blog" />
           <label htmlFor="3" data-navbar="About" />
           <RadioInput
             id="4"
             to="/contact"
-            activeStyle={{ background: "teal", border: "2px solid green" }}
+            activeStyle={{ background: "#4d7a6a", border: "3px solid white" }}
           />
           <label htmlFor="4" data-navbar="Contact" />
         </div>
