@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const Blog = ({ devToPosts }) => {
   return (
-    <div className="blog-wrapper">
+    <main className="blog-wrapper">
       <Head>
         <title>Blog</title>
       </Head>
@@ -27,7 +27,7 @@ const Blog = ({ devToPosts }) => {
           }
         `}
       </style>
-    </div>
+    </main>
   );
 };
 

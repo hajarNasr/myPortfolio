@@ -2,7 +2,7 @@ const Post = ({ post }) => {
   return (
     <div className="post-wrapper">
       <div>
-        <img src={post.social_image} width="100%" height="65%" />
+        <img src={post.social_image} width="100%" height="65%" alt="" />
       </div>
       <div className="post-info">
         <a href={`https://dev.to${post.path}`} target="_blanck">
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
           .date {
             font-size: 14px;
             margin-top: 5px;
-            color: gray;
+            color: rgb(107, 106, 106);
             display: block;
             padding-left: 10px;
           }

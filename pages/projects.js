@@ -14,43 +14,45 @@ const Projects = () => {
     );
   };
   return (
-    <div className="projects-page">
+    <>
       <Head>
         <title>Projects</title>
       </Head>
-      <FilterByTech onFilter={filterProjectsInfo} />
-      <div className="projects-page__inner">
-        <div className="projects-wrapper">
-          {projectsInfo.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
+      <main className="projects-page">
+        <FilterByTech onFilter={filterProjectsInfo} />
+        <div className="projects-page__inner">
+          <div className="projects-wrapper">
+            {projectsInfo.map((project) => (
+              <Project key={project.id} project={project} />
+            ))}
+          </div>
         </div>
-      </div>
-      <style jsx global>{`
-        body {
-          background: whitesmoke;
-        }
-        .projects-page__inner {
-          display: flex;
-          justify-content: space-between;
-        }
-        .projects-wrapper {
-          width: 90%;
-          display: grid;
-          grid-gap: 25px;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          margin: auto;
-          padding-bottom: 30px;
-          min-height: 80vh;
-        }
-        navbar #navbar-slider label::after {
-          background: lightgray;
-        }
-        navbar #navbar-slider::before {
-          background: lightgray;
-        }
-      `}</style>
-    </div>
+        <style jsx global>{`
+          body {
+            background: whitesmoke;
+          }
+          .projects-page__inner {
+            display: flex;
+            justify-content: space-between;
+          }
+          .projects-wrapper {
+            width: 90%;
+            display: grid;
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            margin: auto;
+            padding-bottom: 30px;
+            min-height: 80vh;
+          }
+          navbar #navbar-slider label::after {
+            background: lightgray;
+          }
+          navbar #navbar-slider::before {
+            background: lightgray;
+          }
+        `}</style>
+      </main>
+    </>
   );
 };
 
