@@ -45,10 +45,10 @@ const Projects = () => {
             min-height: 80vh;
           }
           navbar #navbar-slider label::after {
-            background: lightgray;
+            background: lightgray !important;
           }
           navbar #navbar-slider::before {
-            background: lightgray;
+            background: lightgray !important;
           }
         `}</style>
       </main>
