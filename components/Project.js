@@ -17,7 +17,7 @@ const Project = ({ project }) => {
       </div>
       <style jsx>{`
         .project-wrapper {
-          height: 380px;
+          height: 250px;
           position: relative;
         }
 

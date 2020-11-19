@@ -18,12 +18,18 @@ const Blog = ({ devToPosts }) => {
           .blog-wrapper {
             width: 90%;
             display: grid;
-            grid-gap: 25px;
+            grid-gap: 20px;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             margin: auto;
             padding-bottom: 30px;
             min-height: 80vh;
             margin-top: 100px;
+          }
+          @media (max-width: 400px) {
+            .blog-wrapper {
+              grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+              margin-left: 10px !important;
+            }
           }
         `}
       </style>

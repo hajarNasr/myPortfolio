@@ -1,7 +1,6 @@
 const FilterByTech = ({ onFilter }) => {
   return (
     <div className="filter-by-tech">
-      <h3>Filter by:</h3>
       <div className="tech-logos">
         {logosInfo.map((logo) => (
           <img
@@ -16,7 +15,7 @@ const FilterByTech = ({ onFilter }) => {
           />
         ))}
       </div>
-      <style jsx>
+      <style jsx global>
         {`
           .filter-by-tech,
           .tech-logos {
@@ -24,13 +23,9 @@ const FilterByTech = ({ onFilter }) => {
             align-items: center;
           }
           .filter-by-tech {
-            height: 65px;
             width: 70%;
             margin: auto;
-            margin-bottom: 35px;
             justify-content: space-around;
-            border-radius: 5px;
-            box-shadow: 0px 3px 5px lightgray, 0px -3px 5px lightgray;
           }
           .filter-by-tech h3 {
             color: #943c3c;
@@ -39,12 +34,31 @@ const FilterByTech = ({ onFilter }) => {
           .tech-logos {
             flex: 1;
             justify-content: space-evenly;
+            padding-top: 70px;
           }
           .tech-logos img {
             cursor: pointer;
           }
           .tech-logos img:hover {
             transform: scale(1.1);
+          }
+          @media (max-width: 400px) {
+            .filter-by {
+              display: none !important;
+            }
+            .filter-by-tech {
+              box-shadow: none;
+              padding-top: 10px;
+            }
+            .tech-logos img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+          @media (max-width: 700px) {
+            .filter-by-tech {
+              width: 100%;
+            }
           }
         `}
       </style>

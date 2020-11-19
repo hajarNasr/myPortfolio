@@ -19,6 +19,12 @@ const Logo = () => (
         align-items: center;
         font-weight: 500;
       }
+      @media (max-width: 650px) {
+        .logo {
+          top: 20px;
+          right: 10px;
+        }
+      }
     `}</style>
   </div>
 );

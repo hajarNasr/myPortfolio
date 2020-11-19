@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap");
 :root {
   --projShadowColor: rgba(151, 124, 124, 0.486);
   --postShadowColor: rgba(0, 0, 0, 0.2);
@@ -6,8 +7,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Inconsolata, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100%;
+  height: 100%;
+  min-width: 280px;
 }
 
 a {
@@ -19,7 +23,7 @@ a {
   box-sizing: border-box;
 }
 .page {
-  margin-left: 100px;
+  padding-left: 100px;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -44,7 +48,8 @@ a {
 }
 
 .project-wrapper,
-.overlay a {
+.overlay a,
+.who-i-am- {
   box-shadow: inset 20px 0 20px var(--projShadowColor),
     0px 1px 0 var(--projShadowColor), 0px 2px 0 var(--projShadowColor),
     0px 2px 3px var(--projShadowColor);
@@ -55,7 +60,7 @@ a {
 .img-wrapper img {
   display: block;
   width: 100%;
-  height: 380px;
+  height: 250px;
   position: absolute;
   border-radius: 5px;
 }
@@ -74,4 +79,24 @@ a {
     0px 2px 0 lightgray, 0px 2px 1px lightgray;
   box-shadow: 0px 2px 2px lightgray, 0px -2px 2px lightgray;
   border-radius: 5px;
+}
+
+article {
+  background: #f1f7eb;
+
+  border-right: 2px solid #867e8f8c;
+  border-left: 2px solid #867e8f8c;
+}
+article p:first-child {
+  background: #f0e2df;
+}
+article p:last-child {
+  background: #cfa096;
+}
+
+article p {
+  background: #e2e2e2 !important;
+  border-top: 2px solid #867e8f8c;
+  border-bottom: 2px solid #867e8f8c;
+  color: #524564;
 }

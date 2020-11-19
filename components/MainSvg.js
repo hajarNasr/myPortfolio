@@ -1,11 +1,12 @@
 const MainSvg = () => (
   <>
     <svg
-      width="600"
-      height="499"
+      width="480"
+      height="410"
       viewBox="0 0 600 499"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="main-svg"
     >
       <rect width="600" height="499" fill="#D9DC3D" />
       <path
@@ -162,6 +163,11 @@ const MainSvg = () => (
       svg {
         margin-left: 50px;
         margin-top: 50px;
+      }
+      @media (max-width: 750px) {
+        .main-svg {
+          display: none;
+        }
       }
     `}</style>
   </>
