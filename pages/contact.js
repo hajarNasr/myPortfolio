@@ -7,7 +7,13 @@ const Contact = () => {
       </Head>
       <main className="contact-wrapper">
         <h1>Keep in Touch</h1>
-        <form className="contact-form">
+        <form
+          className="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <label className="label">
             <span>Name&emsp;</span>
             <input type="text" name="name" placeholder="Name" />
@@ -23,8 +29,14 @@ const Contact = () => {
           </label>
           <label className="label">
             <span>Message</span>
-            <textarea rows="5" placeholder="Enter message"></textarea>
+            <textarea
+              rows="5"
+              placeholder="Enter message"
+              name="message"
+              required
+            ></textarea>
           </label>
+          <input type="hidden" name="form-name" value="contact" />
           <button>Send</button>
         </form>
         <style jsx global>{`
