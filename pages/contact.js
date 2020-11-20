@@ -1,5 +1,13 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 const Contact = () => {
+  const [success, setSuccess] = useState(false);
+  useEffect(() => {
+    // detect if the message was successfully sent
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -7,12 +15,20 @@ const Contact = () => {
       </Head>
       <main className="contact-wrapper">
         <h1>Keep in Touch</h1>
+        {success && (
+          <p className="thank-you-note">
+            Thank you so much for your message :)
+          </p>
+        )}
         <form
           className="contact-form"
           name="contact"
           method="POST"
           data-netlify="true"
+          // avoid showing captcha when submitting the form
           netlify-honeypot="bot-field"
+          // this tells netlify that we want the user to stay on this page after the form submission
+          action="/contact?success=true"
         >
           <label className="label">
             <span>Name&emsp;</span>
@@ -49,8 +65,12 @@ const Contact = () => {
             padding-bottom: 25px;
           }
           h1 {
-            padding-bottom: 50px;
+            padding-bottom: 40px;
             color: #4d7a6a;
+          }
+          .thank-you-note {
+            color: #4d7a6a;
+            margin-top: -25px;
           }
           .contact-form {
             display: flex;
