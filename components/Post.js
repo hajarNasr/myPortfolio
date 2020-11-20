@@ -12,7 +12,9 @@ const Post = ({ post }) => {
       </div>
       <div className="post-info">
         <a href={`https://dev.to${post.path}`} target="_blank" rel="noopener">
-          <span className="title">{post.title} </span>
+          <span className="title" aria-label={`Article: ${post.title}`}>
+            {post.title}
+          </span>
         </a>
 
         <span className="date">

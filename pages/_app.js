@@ -15,10 +15,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Web site created using Nextjs" />
       </Head>
       <Logo />
-      <MainNavbar />
       <div className="page">
         <Component {...pageProps} />
       </div>
+      <MainNavbar />
       <Footer />
     </>
   );

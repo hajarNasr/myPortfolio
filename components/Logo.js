@@ -2,7 +2,7 @@ import Link from "next/link";
 const Logo = () => (
   <div className="logo">
     <Link href="/">
-      <a>HN</a>
+      <a aria-hidden={true}>HN</a>
     </Link>
     <style jsx>{`
       .logo {

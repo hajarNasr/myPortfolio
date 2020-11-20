@@ -7,12 +7,12 @@ const Main = () => {
     <main className="main-page">
       <div className="main-page__left">
         <h1>
-          <code>{openHello}</code>
-          <div className="hello-msg">
+          <code aria-label="Hello">{openHello}</code>
+          <main className="hello-msg">
             <p>I'm Hajar Nasr,</p>
             <p>Aspiring web developer.</p>
-          </div>
-          <code>{closeHello}</code>
+          </main>
+          <code aria-hidden={true}>{closeHello}</code>
         </h1>
         <ul className="social-links">
           <SocialLink

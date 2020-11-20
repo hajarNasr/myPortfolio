@@ -1,4 +1,4 @@
-import NavLink from "../components/NavLink";
+import RadioInput from "../components/RadioInput";
 const MainNavbar = () => {
   return (
     <div id="navbar-wrapper">
@@ -24,12 +24,7 @@ const MainNavbar = () => {
             }}
           />
           <label htmlFor="2" data-navbar="Projects" />
-          <RadioInput
-            id="3"
-            to="/about"
-            ariaLabel="About"
-            activeStyle={{ background: "#867E8F", border: "3px solid white" }}
-          />
+
           <RadioInput
             id="5"
             to="/blog"
@@ -37,6 +32,12 @@ const MainNavbar = () => {
             activeStyle={{ background: "#436671", border: "3px solid white" }}
           />
           <label htmlFor="5" data-navbar="Blog" />
+          <RadioInput
+            id="3"
+            to="/about"
+            ariaLabel="About"
+            activeStyle={{ background: "#867E8F", border: "3px solid white" }}
+          />
           <label htmlFor="3" data-navbar="About" />
           <RadioInput
             id="4"
@@ -171,11 +172,3 @@ const MainNavbar = () => {
 };
 
 export default MainNavbar;
-
-const RadioInput = ({ id, to, activeStyle, ariaLabel }) => (
-  <NavLink href={to} id={id} activeStyle={activeStyle}>
-    <a aria-label={ariaLabel}>
-      <input type="radio" name="navbar-option" id={id} value={id} required />
-    </a>
-  </NavLink>
-);

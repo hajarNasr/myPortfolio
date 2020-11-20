@@ -1,7 +1,7 @@
 const FilterByTech = ({ onFilter }) => {
   return (
     <div className="filter-by-tech">
-      <div className="tech-logos">
+      <main className="tech-logos" aria-label="Filter by">
         {logosInfo.map((logo) => (
           <img
             key={logo.name}
@@ -10,11 +10,12 @@ const FilterByTech = ({ onFilter }) => {
             width={logo.width}
             height={logo.height}
             title={logo.name}
-            role="button"
+            aria-label={logo.name}
+            tabIndex="0"
             onClick={() => onFilter(logo.name)}
           />
         ))}
-      </div>
+      </main>
       <style jsx global>
         {`
           .filter-by-tech,

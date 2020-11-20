@@ -18,7 +18,7 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <main className="projects-page">
+      <div className="projects-page">
         <FilterByTech onFilter={filterProjectsInfo} />
         <div className="projects-page__inner">
           <div className="projects-wrapper">
@@ -58,7 +58,7 @@ const Projects = () => {
             }
           }
         `}</style>
-      </main>
+      </div>
     </>
   );
 };
