@@ -7,7 +7,13 @@ const Contact = () => {
       </Head>
       <main className="contact-wrapper">
         <h1>Keep in Touch</h1>
-        <form className="contact-form">
+        <form
+          className="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <label className="label">
             <span>Name&emsp;</span>
             <input type="text" name="name" placeholder="Name" />
@@ -23,8 +29,14 @@ const Contact = () => {
           </label>
           <label className="label">
             <span>Message</span>
-            <textarea rows="5" placeholder="Enter message"></textarea>
+            <textarea
+              rows="5"
+              placeholder="Enter message"
+              name="message"
+              required
+            ></textarea>
           </label>
+          <input type="hidden" name="form-name" value="contact" />
           <button>Send</button>
         </form>
         <style jsx global>{`
@@ -32,22 +44,27 @@ const Contact = () => {
             background: #cfe5c8;
           }
           .contact-wrapper {
-            margin-top: 80px;
+            padding-top: 80px;
             text-align: center;
-            height: 82vh;
-            min-height: 82vh;
+            padding-bottom: 25px;
           }
           h1 {
-            margin-bottom: 50px;
+            padding-bottom: 50px;
             color: #4d7a6a;
           }
           .contact-form {
             display: flex;
             flex-direction: column;
-            height: 65%;
+            justify-content: space-around;
+            align-items: center;
             width: 50%;
             margin: auto;
             background: #f8fff8;
+            padding: 10px;
+          }
+          .contact-form label,
+          .contact-form button {
+            margin: 20px;
           }
           button {
             width: 30%;
@@ -79,6 +96,7 @@ const Contact = () => {
           .label textarea {
             flex: 0.9;
             border: none;
+            padding-left: 3px;
           }
           .label span {
             margin: auto;
@@ -94,6 +112,39 @@ const Contact = () => {
           textarea {
             background: #faf8ff;
             border-left: 1px solid #c9dadb !important;
+          }
+          @media (max-width: 1100px) {
+            .contact-form {
+              width: 60%;
+            }
+            .contact-wrapper {
+              margin-left: -20px;
+            }
+            .label {
+              width: 90%;
+            }
+          }
+          @media (max-width: 750px) {
+            .contact-form {
+              width: 80%;
+            }
+            .contact-wrapper {
+              margin-left: -20px;
+            }
+            .label {
+              width: 90%;
+            }
+          }
+          @media (max-width: 550px) {
+            .contact-form {
+              width: 90%;
+            }
+            .contact-wrapper {
+              margin-left: -20px;
+            }
+            .label {
+              width: 90%;
+            }
           }
         `}</style>
       </main>

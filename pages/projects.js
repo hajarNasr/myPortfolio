@@ -18,7 +18,7 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <main className="projects-page">
+      <div className="projects-page">
         <FilterByTech onFilter={filterProjectsInfo} />
         <div className="projects-page__inner">
           <div className="projects-wrapper">
@@ -36,22 +36,29 @@ const Projects = () => {
             justify-content: space-between;
           }
           .projects-wrapper {
-            width: 90%;
+            width: 80%;
             display: grid;
-            grid-gap: 25px;
+            grid-gap: 20px;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             margin: auto;
             padding-bottom: 30px;
             min-height: 80vh;
+            margin-top: 20px;
           }
           navbar #navbar-slider label::after {
-            background: lightgray;
+            background: lightgray !important;
           }
           navbar #navbar-slider::before {
-            background: lightgray;
+            background: lightgray !important;
+          }
+          @media (max-width: 400px) {
+            .projects-wrapper {
+              grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+              margin-left: 10px !important;
+            }
           }
         `}</style>
-      </main>
+      </div>
     </>
   );
 };

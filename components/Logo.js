@@ -2,7 +2,7 @@ import Link from "next/link";
 const Logo = () => (
   <div className="logo">
     <Link href="/">
-      <a>HN</a>
+      <a aria-hidden={true}>HN</a>
     </Link>
     <style jsx>{`
       .logo {
@@ -18,6 +18,12 @@ const Logo = () => (
         justify-content: center;
         align-items: center;
         font-weight: 500;
+      }
+      @media (max-width: 650px) {
+        .logo {
+          top: 20px;
+          right: 10px;
+        }
       }
     `}</style>
   </div>

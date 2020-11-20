@@ -1,4 +1,4 @@
-import NavLink from "../components/NavLink";
+import RadioInput from "../components/RadioInput";
 const MainNavbar = () => {
   return (
     <div id="navbar-wrapper">
@@ -13,20 +13,18 @@ const MainNavbar = () => {
               border: "3px solid whitesmoke",
             }}
           />
-          <label htmlFor="1" data-navbar="Main" />
+          <label htmlFor="1" data-navbar="Home" />
           <RadioInput
             id="2"
             to="/projects"
             ariaLabel="Projects"
-            activeStyle={{ background: "gray", border: "3px solid #943c3c" }}
+            activeStyle={{
+              background: "#943C3C",
+              border: "3px solid gray",
+            }}
           />
           <label htmlFor="2" data-navbar="Projects" />
-          <RadioInput
-            id="3"
-            to="/about"
-            ariaLabel="About"
-            activeStyle={{ background: "teal", border: "2px solid green" }}
-          />
+
           <RadioInput
             id="5"
             to="/blog"
@@ -34,6 +32,12 @@ const MainNavbar = () => {
             activeStyle={{ background: "#436671", border: "3px solid white" }}
           />
           <label htmlFor="5" data-navbar="Blog" />
+          <RadioInput
+            id="3"
+            to="/about"
+            ariaLabel="About"
+            activeStyle={{ background: "#867E8F", border: "3px solid white" }}
+          />
           <label htmlFor="3" data-navbar="About" />
           <RadioInput
             id="4"
@@ -52,7 +56,7 @@ const MainNavbar = () => {
             top: 0;
             z-index: 99999;
             width: 5%;
-            left: 5%;
+            left: 70px;
           }
           navbar {
             width: 90%;
@@ -94,8 +98,8 @@ const MainNavbar = () => {
             content: attr(data-navbar);
             position: absolute;
             left: 75%;
-            padding-top: 10px;
-            margin-top: 25px;
+            padding-top: 15px;
+            margin-top: 28px;
             transform: translate(-50%, 45px);
             font-size: 14px;
             letter-spacing: 0.4px;
@@ -145,6 +149,22 @@ const MainNavbar = () => {
             transform: translate(-50%, 45px) scale(1.1);
             transition: all 0.15s linear;
           }
+          @media (max-width: 550px) {
+            .main-nav {
+              left: 50px;
+            }
+          }
+          @media (max-height: 600px) {
+            navbar #navbar-slider label::before {
+              margin-top: 20px;
+              padding-top: 5px;
+            }
+          }
+          @media (max-height: 440px) {
+            navbar #navbar-slider label::before {
+              content: "";
+            }
+          }
         `}
       </style>
     </div>
@@ -152,11 +172,3 @@ const MainNavbar = () => {
 };
 
 export default MainNavbar;
-
-const RadioInput = ({ id, to, activeStyle, ariaLabel }) => (
-  <NavLink href={to} id={id} activeStyle={activeStyle}>
-    <a aria-label={ariaLabel}>
-      <input type="radio" name="navbar-option" id={id} value={id} required />
-    </a>
-  </NavLink>
-);

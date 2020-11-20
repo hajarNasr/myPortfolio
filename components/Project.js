@@ -3,21 +3,25 @@ const Project = ({ project }) => {
   const [demo, code] = ["<Demo/>", "<Code/>"];
   return (
     <div className="project-wrapper">
-      <div className="img-wrapper">
-        <LazyLoadImage src={project.image} alt={project.alt} />
+      <div
+        className="img-wrapper"
+        tabIndex="0"
+        aria-label={`Project: ${project.title}`}
+      >
+        <LazyLoadImage src={project.image} alt="" />
       </div>
       <div className="overlay">
         <a href={`${project.github}`} target="_blank" rel="noopener">
-          <code>{code}</code>
+          <code aria-label="code">{code}</code>
         </a>
 
         <a href={`${project.demoLink}`} target="_blank" rel="noopener">
-          <code>{demo}</code>
+          <code aria-label="demo">{demo}</code>
         </a>
       </div>
       <style jsx>{`
         .project-wrapper {
-          height: 380px;
+          height: 250px;
           position: relative;
         }
 

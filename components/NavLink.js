@@ -15,7 +15,7 @@ const NavLink = ({ href, id, activeStyle, children }) => {
         navbar #navbar-slider label[for="${activeLink}"]::after {
           width: 30px;
           height: 30px;
-          background: ${activeStyle.background};
+          background: ${activeStyle.background} !important;
           border: ${activeStyle.border};
         }
         navbar #navbar-slider label[for="${activeLink}"]::before {
