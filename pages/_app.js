@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Web site created using Nextjs" />
+        <link rel="shortcut icon" href="/favicon-16x16.png" />
       </Head>
       <Logo />
       <div className="page">

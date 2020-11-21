@@ -38,7 +38,7 @@ const About = () => {
           display: flex;
           flex-direction: column;
           align-items: space-between;
-          margin-auto;
+          margin: auto;
         }
         h1 {
           text-align: center;
@@ -47,7 +47,7 @@ const About = () => {
         article {
           width: 55%;
           margin: auto;
-          margin-top:20px;
+          margin-top: 20px;
           display: flex;
           justify-content: space-around;
           background: #ddd6d6;
@@ -62,21 +62,41 @@ const About = () => {
           flex-direction: column;
           color: rgb(80, 79, 79);
           line-height: 2.1;
+          text-align: justify;
+          text-justify: inter-word;
         }
-        article a{
-          color:#5d5399;
+        article a {
+          color: #5d5399;
         }
         p span {
           margin-top: 15px;
         }
-        @media (max-width: 1000px){
+        @media (max-width: 1000px) {
           article {
             width: 75%;
           }
         }
-        @media (max-width: 680px) {
+
+        @media (max-width: 700px) {
           article {
-            width: 95%;
+            width: 90%;
+          }
+          p {
+            padding: 3px;
+            line-height: 1.5;
+          }
+          p span {
+            margin-top: 10px;
+          }
+        }
+        @media (max-width: 400px) {
+          main {
+            margin-top: 80px;
+          }
+          article {
+            width: 99%;
+            border-width: 2px;
+            border-right: none;
           }
         }
       `}</style>

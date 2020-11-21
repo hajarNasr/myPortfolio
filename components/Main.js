@@ -44,6 +44,10 @@ const Main = () => {
         body {
           background-color: #d9dc3d;
         }
+        .page {
+          padding-left: 60px !important;
+        }
+
         .main-page {
           display: flex;
           align-items: center;
