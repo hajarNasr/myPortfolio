@@ -3,7 +3,7 @@ import Main from "../components/Main";
 
 export default function Home() {
   return (
-    <div>
+    <div className="page">
       <Head>
         <title>Hajar Nasr</title>
         <link rel="icon" href="/favicon.ico" />

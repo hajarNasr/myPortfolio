@@ -48,14 +48,13 @@ const Main = () => {
           display: flex;
           align-items: center;
           justify-content: space-around;
-          margin: auto;
           height: 95vh;
           width: 100%;
+          border: 1px solid gren;
         }
         .main-page__left {
-          line-height: 1.2;
+          line-height: 1.8;
           color: rgba(81, 81, 87, 0.829);
-          margin-left: 20px;
           font-weight: 500;
           font-size: 0.9rem;
         }

@@ -2,7 +2,9 @@ import Link from "next/link";
 const Logo = () => (
   <div className="logo">
     <Link href="/">
-      <a aria-hidden={true}>HN</a>
+      <a aria-hidden={true} tabIndex="-1">
+        HN
+      </a>
     </Link>
     <style jsx>{`
       .logo {

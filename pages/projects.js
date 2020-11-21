@@ -6,6 +6,7 @@ const Projects = () => {
   let [projectsInfo, setProjectInfo] = useState(allProjectsInfo);
 
   const filterProjectsInfo = (name) => {
+    /*allProjectsInfo is an object of all projects info at the bottom of this page*/
     setProjectInfo(
       allProjectsInfo.filter((project) => {
         const isExisted = project["tech"].indexOf(name) !== -1;
@@ -30,6 +31,9 @@ const Projects = () => {
         <style jsx global>{`
           body {
             background: whitesmoke;
+          }
+          .projects-page {
+            width: 100%;
           }
           .projects-page__inner {
             display: flex;
@@ -68,12 +72,21 @@ export default Projects;
 const allProjectsInfo = [
   {
     title: "Portfolio",
-    demoLink: "https://artisticzone.herokuapp.com/",
+    demoLink: "https://hajarnasr.netlify.app/",
     id: "5",
     image: "https://i.ibb.co/SNt4WJc/port.jpg",
     alt: "This portfolio's image",
-    github: "https://github.com/hajarNasr/ArtisticZone",
+    github: "https://github.com/hajarNasr/myPortfolio",
     tech: ["HTML5 & CSS3", "JavaScript", "React", "Nextjs"],
+  },
+  {
+    title: "Smart Shopping List",
+    demoLink: "https://tcl-15-smart-shopping-list.netlify.app/",
+    id: "5",
+    image: "https://i.ibb.co/8xyPkj5/smartcart.jpg",
+    alt: "This portfolio's image",
+    github: "https://github.com/the-collab-lab/tcl-15-smart-shopping-list/",
+    tech: ["HTML5 & CSS3", "JavaScript", "React", "Firebase"],
   },
   {
     title: "Artistic Zone",
@@ -94,11 +107,11 @@ const allProjectsInfo = [
   },
   {
     title: "Old Portfolio",
-    demoLink: "https://irecommend-app.herokuapp.com/",
+    demoLink: "https://onemile.netlify.app/",
     id: "3",
     image: "https://i.ibb.co/52KgSjp/xx.jpg",
     alt: "My old portfolio's image",
-    github: "https://github.com/hajarNasr/irecommend-app",
+    github: "https://github.com/hajarNasr/portfolio",
     tech: ["HTML5 & CSS3", "MDL", "JavaScript", "React"],
   },
   {

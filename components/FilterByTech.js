@@ -106,7 +106,7 @@ const logosInfo = [
     alt: "Django",
   },
   {
-    name: "Firebse",
+    name: "Firebase",
     src: "https://img.icons8.com/color/48/000000/firebase.png",
     width: "40",
     height: "40",
