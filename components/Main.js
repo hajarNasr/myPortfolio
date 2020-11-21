@@ -54,10 +54,9 @@ const Main = () => {
           justify-content: space-around;
           height: 95vh;
           width: 100%;
-          border: 1px solid gren;
         }
         .main-page__left {
-          line-height: 1.4;
+          line-height: 1.7;
           color: rgba(81, 81, 87, 0.829);
           font-weight: 500;
           font-size: 0.9rem;
@@ -90,7 +89,7 @@ const Main = () => {
             font-size: 0.7rem;
             margin-left: -10px;
             width: 100%;
-            line-height: 1.3;
+            line-height: 1.9;
           }
           .hello-msg {
             margin-left: 15px;
@@ -103,7 +102,7 @@ const Main = () => {
           .main-page__left {
             margin-left: 40px;
             font-size: 0.75rem;
-            line-height: 1.8;
+            line-height: 1.9;
           }
         }
       `}</style>

@@ -34,7 +34,9 @@ const Projects = () => {
           }
           .projects-page {
             width: 100%;
+            height: 100%;
           }
+
           .projects-page__inner {
             display: flex;
             justify-content: space-between;
@@ -46,7 +48,6 @@ const Projects = () => {
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             margin: auto;
             padding-bottom: 30px;
-            min-height: 80vh;
             margin-top: 20px;
           }
           navbar #navbar-slider label::after {
