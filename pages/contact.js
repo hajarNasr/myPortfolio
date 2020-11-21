@@ -162,7 +162,7 @@ const Contact = () => {
             }
             @media (max-width: 550px) {
               .contact-form {
-                width: 99%;
+                width: 95%;
               }
               .contact-wrapper {
                 margin-left: -20px;

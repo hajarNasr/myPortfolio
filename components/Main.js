@@ -53,7 +53,7 @@ const Main = () => {
           border: 1px solid gren;
         }
         .main-page__left {
-          line-height: 1.8;
+          line-height: 1.4;
           color: rgba(81, 81, 87, 0.829);
           font-weight: 500;
           font-size: 0.9rem;
@@ -86,7 +86,7 @@ const Main = () => {
             font-size: 0.7rem;
             margin-left: -10px;
             width: 100%;
-            line-height: 1.8;
+            line-height: 1.3;
           }
           .hello-msg {
             margin-left: 15px;
