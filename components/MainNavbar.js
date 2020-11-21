@@ -99,7 +99,7 @@ const MainNavbar = () => {
             position: absolute;
             left: 75%;
             padding-top: 15px;
-            margin-top: 28px;
+            margin-top: 25px;
             transform: translate(-50%, 45px);
             font-size: 14px;
             letter-spacing: 0.4px;
@@ -156,8 +156,8 @@ const MainNavbar = () => {
           }
           @media (max-height: 600px) {
             navbar #navbar-slider label::before {
-              margin-top: 20px;
-              padding-top: 5px;
+              margin-top: 25px;
+              padding-top: 7px;
             }
           }
           @media (max-height: 440px) {
