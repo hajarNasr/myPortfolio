@@ -84,7 +84,7 @@ const allProjectsInfo = [
     title: "Smart Shopping List",
     demoLink: "https://tcl-15-smart-shopping-list.netlify.app/",
     id: "5",
-    image: "https://i.ibb.co/8xyPkj5/smartcart.jpg",
+    image: "https://i.ibb.co/6gMrXvC/smartcart.jpg",
     alt: "This portfolio's image",
     github: "https://github.com/the-collab-lab/tcl-15-smart-shopping-list/",
     tech: ["HTML5 & CSS3", "JavaScript", "React", "Firebase"],
