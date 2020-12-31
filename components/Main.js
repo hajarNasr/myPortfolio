@@ -10,7 +10,7 @@ const Main = () => {
           <code aria-label="Hello">{openHello}</code>
           <main className="hello-msg">
             <p>I'm Hajar Nasr,</p>
-            <p>Aspiring web developer.</p>
+            <p>Web Developer.</p>
           </main>
           <code aria-hidden={true}>{closeHello}</code>
         </h1>

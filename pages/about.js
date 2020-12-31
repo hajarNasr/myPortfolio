@@ -15,15 +15,11 @@ const About = () => {
               in coding.
             </span>
             <span>
-              I'm currently participating in{" "}
-              <a target="_blanck" href="https://the-collab-lab.codes/">
-                The Collab Lab
-              </a>
-              , building a React/Firebase shopping app and collaborating with an
-              amazing team of talented developers and mentors.
+              I'm currently into open source and working on two projcts with
+              people from around the world using React and TypeScript.
             </span>
             <span>
-              I love nature, the trees, the birds, and my favorite is the wind.
+              I love nature. The trees, the birds, and my favorite is the wind.
             </span>
             <span>Sometimes I write.</span>
             <span>Thank you for being here.</span>
